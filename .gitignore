@@ -1,0 +1,44 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+*.venv
+venvpublicdataapi
+publicdataapivenv
+
+# Django-related
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Ignore .env files containing secrets
+.env
+.env.*
+
+# IDE/editor-specific
+.vscode/
+.idea/
+*.iml
+
+# Migrations (optional, if you don’t want to track them)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Node modules (if using frontend dependencies)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Compiled cache
+__pycache__/
