@@ -8,20 +8,22 @@ from corsheaders.defaults import default_headers
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+# Load secret key from environment
 SECRET_KEY = config('SECRET_KEY')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Set debug mode based on environment variable
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Get the database URL from environment variable
 DATABASE_URL = config('DATABASE_URL')  # Ensure DATABASE_URL is set in .env or environment
 
+# Configure databases
 DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, ssl_require=True)
 }
 
-#ALLOWED_HOSTS = ['rockae.com', '.rockae.com']
+# Allow all hosts
 ALLOWED_HOSTS = ['*']
 
 # Application definition
